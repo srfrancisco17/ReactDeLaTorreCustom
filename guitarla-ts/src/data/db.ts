@@ -1,10 +1,4 @@
-type Guitar = {
-    id: number
-    name: string
-    image: string
-    description: string
-    price: number
-}
+import type {Guitar} from '../types';
 
 export const db: Guitar[] = [
   {
@@ -13,6 +7,12 @@ export const db: Guitar[] = [
       image: 'guitarra_01',
       description: 'Morbi ornare augue nisl, vel elementum dui mollis vel. Curabitur non ex id eros fermentum hendrerit.',
       price: 299,
+      reviews: [
+        "I like that",
+        "It's normal",
+        "It can be better",
+      ],
+      quantity: 0
   },
   {
       id: 2,
@@ -20,6 +20,12 @@ export const db: Guitar[] = [
       image: 'guitarra_02',
       description: 'Morbi ornare augue nisl, vel elementum dui mollis vel. Curabitur non ex id eros fermentum hendrerit.',
       price: 349,
+      reviews: [
+        "Nice",
+        "Good",
+        "Wonderfull",
+      ],
+      quantity: 0
   },
   {
       id: 3,
@@ -27,7 +33,9 @@ export const db: Guitar[] = [
       image: 'guitarra_03',
       description: 'Morbi ornare augue nisl, vel elementum dui mollis vel. Curabitur non ex id eros fermentum hendrerit.',
       price: 329,
+      quantity: 0
   },
+  /*
   {
       id: 4,
       name: 'VAI',
@@ -91,4 +99,5 @@ export const db: Guitar[] = [
       description: 'Morbi ornare augue nisl, vel elementum dui mollis vel. Curabitur non ex id eros fermentum hendrerit.',
       price: 379,
   },
+  */
 ]

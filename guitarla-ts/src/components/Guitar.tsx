@@ -1,4 +1,5 @@
 import type {Guitar} from '../types';
+import { Review } from './Review';
 
 type GuitarProps = {
   guitar: Guitar
@@ -7,7 +8,7 @@ type GuitarProps = {
 
 export default function Guitar({guitar,  addToCart} : GuitarProps){
 
-  const {id, name, image, description, price} = guitar;
+  const {name, image, description, price, reviews} = guitar;
 
   return (
     <div className="col-md-6 col-lg-4 my-4 row align-items-center">
@@ -18,6 +19,13 @@ export default function Guitar({guitar,  addToCart} : GuitarProps){
             <h3 className="text-black fs-4 fw-bold text-uppercase">{name}</h3>
             <p>{description}</p>
             <p className="fw-black text-primary fs-3">${price}</p>
+            <b>Reviews:</b>
+            <ul>
+            {
+              reviews ? reviews?.map((review, index) => ( <Review key={index} review={review} />)) : <></>
+            }
+            </ul>
+            <br />
             <button 
               onClick={() => addToCart(guitar)}
               type="button"

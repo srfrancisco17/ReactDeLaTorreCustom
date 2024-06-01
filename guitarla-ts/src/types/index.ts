@@ -3,7 +3,8 @@ export type Guitar = {
   name: string
   image: string
   description: string
-  price: number,
+  price: number
+  reviews?: string[],
   quantity: number
 }
 
